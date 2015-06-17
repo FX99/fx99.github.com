@@ -1,0 +1,58 @@
+
+table
+{
+	width: 50%;
+	height: 100%;
+	border: 5px solid #1da;
+	border-collapse: collapse;
+	float: left;
+}
+td
+{
+	border: 1px solid #1da;
+}
+.panel
+{
+	width: 300px;
+	float: left;
+	margin-left: 30px;
+}
+
+.panel, label, button, input
+{
+	font-size: 20px;
+	font-weight: bold;
+	color: #1da;
+	margin-bottom: 10px;
+}
+#color
+{
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+	border: none
+}
+#size
+{
+	width: 95px;
+	height: 30px;
+	margin-top: 10px;
+	border: 3px solid #1da;
+	background-color: white;
+	text-align: center;
+}
+#reset, #generateImg
+{
+	width: 100px;
+	height: 40px;
+	margin-top: 10px;
+	border: 3px solid #1da;
+	background-color: white;
+}
+#generateImg a
+{
+	text-decoration: none;
+	color: #1da;
+}
+
+
