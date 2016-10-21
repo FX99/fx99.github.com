@@ -155,7 +155,7 @@
 					
 					window.setTimeout(function () {
 						//跳转到下载链接
-						if (!t || Date.now()-loadTime < 600 ){
+						if (!loadTime || Date.now()-loadTime < 600 ){
 							if (browser.versions.ios) {
 								window.location.href = "http://www.baidu.com";
 							} else if (browser.versions.iPad) {
