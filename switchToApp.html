@@ -150,8 +150,10 @@
 					//window.location.href = scheme;
 					//alert(scheme);
 					var loadTime = Date.now();
-					$('body').append("<iframe id='ifr' style='display:none'></iframe>");
-                    			$('#ifr').attr("src", scheme);//ios端 app跳转地址
+					var body = document.getElementByName('body');
+					var ifr = document.createElement("<iframe id='ifr' style='display:none'></iframe>");
+					body.appendChild(ifr);
+                    			ifr.setAttribute('src', scheme);
 					
 					window.setTimeout(function () {
 						//跳转到下载链接
