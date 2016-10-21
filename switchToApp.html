@@ -150,10 +150,11 @@
 					//window.location.href = scheme;
 					//alert(scheme);
 					var loadTime = Date.now();
-					var body = document.getElementByName('body');
-					var ifr = document.createElement("<iframe id='ifr' style='display:none'></iframe>");
-					body.appendChild(ifr);
+					var body = document.getElementsByTagName('body');
+					var ifr = document.createElement("iframe");
+					body[0].appendChild(ifr);
                     			ifr.setAttribute('src', scheme);
+                    			ifr.display = "none";
 					
 					window.setTimeout(function () {
 						//跳转到下载链接
