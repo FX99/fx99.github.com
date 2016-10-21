@@ -147,19 +147,26 @@
 									break;
 					}
 
-					window.location.href = scheme;
+					//window.location.href = scheme;
 					//alert(scheme);
+					var loadTime = Date.now();
+					$('body').append("<iframe id='ifr' style='display:none'></iframe>");
+                    			$('#ifr').attr("src", scheme);//ios端 app跳转地址
+					
 					window.setTimeout(function () {
 						//跳转到下载链接
-						if (browser.versions.ios) {
-							window.location.href = "http://www.baidu.com";
-						} else if (browser.versions.iPad) {
-							window.location.href = "http://www.baidu.com";
-						} else if (browser.versions.android) {
-							window.location.href = "http://www.baidu.com";
-						} else {
-							window.location.href = "http://www.baidu.com";
+						if (!t || Date.now()-loadTime < 600 ){
+							if (browser.versions.ios) {
+								window.location.href = "http://www.baidu.com";
+							} else if (browser.versions.iPad) {
+								window.location.href = "http://www.baidu.com";
+							} else if (browser.versions.android) {
+								window.location.href = "http://www.baidu.com";
+							} else {
+								window.location.href = "http://www.baidu.com";
+							}
 						}
+						
 					}, 500);
 				}
 			} else {
