@@ -5,14 +5,13 @@ function refreshRem(){
     var docEl = window.document.documentElement;
     var width = docEl.getBoundingClientRect().width;
     var rootSize;
-    if(width<2000){
+    if(width<1600){
         rootSize = width/75;
     }else{
         rootSize = width/204.8;
     }
     console.log("html font-size:"+rootSize+"px");
     docEl.style.fontSize = rootSize + 'px';
-    alert(width);
 }
 refreshRem();
 window.onresize  = function(){
