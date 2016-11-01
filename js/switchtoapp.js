@@ -12,6 +12,7 @@ function refreshRem(){
     }
     console.log("html font-size:"+rootSize+"px");
     docEl.style.fontSize = rootSize + 'px';
+    alert(width);
 }
 refreshRem();
 window.onresize  = function(){
