@@ -144,7 +144,12 @@
                     			ifr.style.display = "none";
 					
 					window.setTimeout(function () {
-						alert(_downloadUrl);
+						if(/%3A/.test(_downloadUrl)){
+
+							alert(_downloadUrl);
+							_downloadUrl = _downloadUrl.replace(/%3A/g,':').replace(/%2F/g,'/');
+							alert(_downloadUrl);
+						}
 						//跳转到下载链接
 						if (!loadTime || Date.now()-loadTime < 600 ){
 							if (browser.versions.ios) {
